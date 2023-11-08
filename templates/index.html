@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title%} Главная страница {%endblock%}
+{% block content%}
+
+<!-- Jumbotron -->
+<div
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+  
+>
+
+  <p>
+    <figure class="text-end">
+      <blockquote class="blockquote">
+        <p>Подлинно разумное обучение изменяет и наш ум и наши нравы </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+         <cite title="Source Title">М. Монтень</cite>
+      </figcaption>
+    </figure>
+  </p>
+</div>
+<!-- Jumbotron -->
+  <div class="container text-center">
+    <div class="row">
+      {% for article in articles %}
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-header">
+              {{ article.title }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ article.introduction[:50].strip() }}</h5>
+              <p class="card-text">{{ article.text[:50].strip() }}</p>
+              <a href="{{ url_for('detailed_post', article_id=article.id) }}" class="btn btn-primary">Прочитать статью</a>
+            </div>
+            <div class="card-footer text-muted">
+              {{ article.pub_date.date() }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="row">
+      {% for article in articles2 %}
+        <div class="col">
+          <div class="card text-center">
+            <div class="card-header">
+              {{ article.title }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ article.introduction[:50].strip() }}</h5>
+              <p class="card-text">{{ article.text[:50].strip() }}</p>
+              <a href="{{ url_for('detailed_post', article_id=article.id) }}" class="btn btn-primary">Прочитать статью</a>
+            </div>
+            <div class="card-footer text-muted">
+              {{ article.pub_date.date() }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

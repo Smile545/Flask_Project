@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/flask.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}{%endblock%}</title>
+    <nav>
+	    <div class="logo">
+	    <h2>UmpirE</h2>
+	    </div>
+        <ul>
+		      <li><a href="{{ url_for('index') }}">Главная</a></li>
+              <li><a href="{{ url_for('new_post') }}">Добавить статью</a></li>
+              <li><a href="{{ url_for('admin.index') }}">Админ панель</a></li>
+             
+          </ul>
+	</nav>
+</head>
+<body>
+    {% block content%}
+    {% endblock %}
+    <footer>
+        <figure class="figure">
+            <img src="static\images\boot.png" class="figure-img img-fluid rounded" alt="Botstrap V5.0">
+            <figcaption class="figure-caption">Botstrap</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="static\images\flask.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption">Flask.</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="static\images\html.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption">Html</figcaption>
+        </figure>
+        <figure class="figure">
+            <img src="static\images\css.png" class="figure-img img-fluid rounded" alt="...">
+            <figcaption class="figure-caption">CSS</figcaption>
+        </figure>
+        <figure class="figure">
+          <img src="static\images\SQLite.webp" class="figure-img img-fluid rounded" alt="...">
+          <figcaption class="figure-caption">SQLite</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="static\images\sql.webp" class="figure-img img-fluid rounded" alt="...">
+        <figcaption class="figure-caption">SQLAlchemy</figcaption>
+    </figure>
+    </footer>
+</body>
+</html>

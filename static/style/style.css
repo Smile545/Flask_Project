@@ -1,0 +1,104 @@
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    
+   
+    
+  }
+.footer{
+    width: 10;
+    height: 20;
+    font-size: 15px;
+    color: aliceblue;
+    
+    
+}
+.figure {
+    width: 50px;
+    height: 10px;
+}
+
+body {
+    background-image: url('https://w.forfun.com/fetch/0f/0f18591acaee82fd476d4dc811b5d999.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 1000px; 
+}
+
+.col{
+    
+    opacity: 1;
+}
+
+
+
+
+
+
+section.sec1 {
+	width: 100%;
+	height: 100vh;
+	background: url(https://myrusakov.ru/images/articles/demo/bread.jpg);
+	background-size: cover;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	line-height: 70px;
+	background: rgba(255,255,255,0.3);
+	padding: 0 80px;
+    
+    
+}
+
+div.logo {
+	float: left;
+    color: white;
+
+}
+
+div.logo h2 {
+	font-size: 160%;
+	font-family: 'Lobster', cursive;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	list-style: none;
+}
+
+nav ul li a {
+	padding: 0 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+    color: rgb(255, 251, 251);
+}
+
+.form-group {
+    color: whitesmoke;
+}
+
+.card{
+    opacity: 1;
+    color: rgb(251, 245, 245);
+    background: rgba(163, 162, 162, 0.3);
+}
+
+.text-muted {
+    color: aliceblue;
+}
